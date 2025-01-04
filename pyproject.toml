@@ -1,0 +1,36 @@
+[project]
+name = "silicon-comfyiui"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.13.*"
+dependencies = [
+    "aiohttp>=3.11.11",
+    "einops>=0.8.0",
+    "pillow>=11.1.0",
+    "psutil>=6.1.1",
+    "pyyaml>=6.0.2",
+    "safetensors>=0.5.0",
+    "scipy>=1.15.0",
+    "sentencepiece>=0.2.0",
+    "tokenizers>=0.21.0",
+    "torch==2.6.0.dev20241105",
+    "torchaudio>=2.5.0.dev20241105",
+    "torchsde>=0.2.6",
+    "torchvision>=0.20.0.dev20241105",
+    "tqdm>=4.67.1",
+    "transformers>=4.47.1",
+]
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/nightly/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
+torchvision = { index = "pytorch" }
+torchaudio = { index = "pytorch" }
+
+[tool.uv]
+prerelease = "allow"
